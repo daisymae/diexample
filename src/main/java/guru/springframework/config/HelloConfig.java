@@ -26,6 +26,7 @@ public class HelloConfig {
 
   @Bean
   @Profile("spanish")
+  @Primary
   public HelloWorldService helloWorldServiceSpanish(HelloWorldFactory factory) {
     return factory.createHelloWorldService("es");
   }
