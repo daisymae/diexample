@@ -4,6 +4,6 @@ public class HelloWorldServiceFrenchImpl implements HelloWorldService {
 
   @Override
   public String getGreeting() {
-    return "Hello World";
+    return "Bonjour de monde";
   }
 }

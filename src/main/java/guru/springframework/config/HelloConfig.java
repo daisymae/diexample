@@ -2,8 +2,6 @@ package guru.springframework.config;
 
 import guru.springframework.service.HelloWorldFactory;
 import guru.springframework.service.HelloWorldService;
-import guru.springframework.service.HelloWorldServiceEnglishImpl;
-import guru.springframework.service.HelloWorldSpanishImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -31,7 +29,7 @@ public class HelloConfig {
     return factory.createHelloWorldService("es");
   }
 
-  @Bean
+  @Bean(name = "french")
   public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory) {
     return factory.createHelloWorldService("fr");
   }
