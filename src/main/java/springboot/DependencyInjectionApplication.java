@@ -1,4 +1,4 @@
-package guru.springframework;
+package springboot;
 
 
 import guru.springframework.controller.GreetingController;
