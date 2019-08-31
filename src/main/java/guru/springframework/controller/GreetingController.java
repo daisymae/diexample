@@ -9,14 +9,23 @@ public class GreetingController {
 
   private HelloWorldService helloWorldService;
 
+  private HelloWorldService helloWorldServiceGerman;
+
   @Autowired
   public void setHelloWorldService(HelloWorldService helloWorldService) {
     this.helloWorldService = helloWorldService;
   }
+
+  @Autowired
+  public void setHelloWorldServiceGerman(HelloWorldService helloWorldServiceGerman) {
+    this.helloWorldServiceGerman = helloWorldServiceGerman;
+  }
+
   public String sayHello() {
     String greeting = helloWorldService.getGreeting();
 
     System.out.println(greeting);
+    System.out.println(helloWorldServiceGerman.getGreeting());
 
     return greeting;
   }
